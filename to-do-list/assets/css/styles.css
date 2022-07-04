@@ -1,0 +1,13 @@
+.tarefa{
+    width: 152px;
+    height: 23px;
+    border-radius: 5px;
+}
+
+.btnAdicionar{
+    color: #3C88D1;
+    border: 1px solid #3C88D1;
+    background-color: #BAFAFF;
+    height: 30px;
+    border-radius: 5px;
+}
