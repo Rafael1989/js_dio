@@ -17,7 +17,10 @@ console.log(updateArray(undefined));
 console.log(updateArray(false));
 
 
-//ARRAY
+console.log("//ARRAY ==============================================================================");
+//ARRAY ==============================================================================
+
+
 let array = []
 
 array.push(3)
@@ -48,7 +51,8 @@ array.some(item => item === 5) // algum é 5?
 
 array.reverse() // para reverter a ordem dos elementos
 
-// ARRAY PARAMS
+console.log("// ARRAY PARAMS==============================================================================")
+// ARRAY PARAMS==============================================================================
 
 function sum(x,y,z){
     return x + y + z;
@@ -66,7 +70,8 @@ confereTamanho()
 confereTamanho(1,2)
 confereTamanho(3,4,5)
 
-//ARROW FUNCTION
+console.log("//ARROW FUNCTION==============================================================================")
+//ARROW FUNCTION==============================================================================
 
 const helloWorld = function(){
     return "Hello World";
@@ -95,7 +100,8 @@ NAO EXISTE O OBJETO ARGUMENTS
 O CONSTRUTOR NAO PODE SER UTILIZADO
 */
 
-//ATRIBUINDO VALORES
+console.log("//ATRIBUINDO VALORES==============================================================================")
+//ATRIBUINDO VALORES==============================================================================
 
 numerOne = 1;
 
@@ -113,19 +119,20 @@ if(firstName === "Joao"){
 console.log(firstName, lastName);
 
 var firstName = 'Joao';
-let lastName = "Souza";
+let lastName2 = "Souza";
 
 if(firstName === "Joao"){
-    let lastName = "Rodrigues";
+    let lastName2 = "Rodrigues";
     var firstName = "Pedro";
-    lastName = "Silva";
+    lastName2 = "Silva";
 
-    console.log(firstName, lastName);
+    console.log(firstName, lastName2);
 }
 
 console.log(firstName, lastName);
 
- //VARIAVEL
+console.log("//VARIAVEL==============================================================================")
+ //VARIAVEL==============================================================================
 
  //var y = 0;
 var x = 1;
@@ -141,12 +148,12 @@ const PRECO = 2;
 
 var total = PRECO - desconto;
 
-function soma(a, b){ // declarar a funcao
+function soma3(a, b){ // declarar a funcao
     console.log(a+b);
     return a + b;
 }
 
-soma(3, 5); // chamar a funcao
+soma3(3, 5); // chamar a funcao
 
 console.log('Hello world!');
 
@@ -166,7 +173,9 @@ let array2 = [1,2,4,5,7,8];
 
 returnEvenValues(array2);
 
-// BOOLEAN
+console.log("// BOOLEAN==============================================================================")
+// BOOLEAN==============================================================================
+
 
 let validation = 3 === 0
 
@@ -186,9 +195,9 @@ validation.toString()
 
 !false
 
-// EMPTY; UNDEFINED; NULL
+console.log("// EMPTY; UNDEFINED; NULL==============================================================================")
+// EMPTY; UNDEFINED; NULL==============================================================================
 
-abacaxi
 
 typeof abacaxi // undefined
 
@@ -208,7 +217,8 @@ typeof pera // object (null)
 
 !pera // true (oposto de null é true)
 
-// FOR
+console.log("// FOR==============================================================================")
+// FOR==============================================================================
 function multiplicaPorDois(arr){
     let multiplicados = [];
 
@@ -261,15 +271,16 @@ const nums = [30,20,233,2];
 
 logLetras(nums);
 
-// FUNCAO
+console.log("// FUNCAO==============================================================================")
+// FUNCAO==============================================================================
 
 // funcao anonima
-const soma = function(a, b){
+const soma4 = function(a, b){
     return a + b;
 }
 
-console.log(soma(1,2));
-console.log(soma(3,5));
+console.log(soma4(1,2));
+console.log(soma4(3,5));
 
 // funcao autoinvocavel
 (
@@ -287,16 +298,17 @@ console.log(soma(3,5));
     }
 )(1,2);
 
-const sum = (
+const sum2 = (
     function(a,b){
         console.log(a+b);
         return a+b;
     }
 )(1,2);
 
-console.log(sum);
+console.log(sum2);
 
-//callbacks
+console.log("//callbacks==============================================================================")
+//callbacks==============================================================================
 const calc = function(operacao, num1, num2){
     return operacao(num1, num2);
 }
@@ -315,7 +327,8 @@ const resultSub = calc(sub, 1, 2);
 console.log(resultSoma);
 console.log(resultSub);
 
-//FUNCAO ATIVIDADE
+console.log("//FUNCAO ATIVIDADE==============================================================================")
+//FUNCAO ATIVIDADE==============================================================================
 
 const alunos = [{
     nome: "Rafael",
@@ -362,8 +375,8 @@ const pessoa1 = {
 console.log(calculaIdade.call(pessoa1, 10));
 console.log(calculaIdade.apply(pessoa1, [10]));
 
-
-// IF ELSE
+console.log("// IF ELSE==============================================================================")
+// IF ELSE==============================================================================
 
 function testIfElse(num){
     if(!num){
@@ -381,7 +394,8 @@ testIfElse();
 testIfElse(-1);
 testIfElse(1);
 
-// BIND; APPLY; CALL
+console.log("// BIND; APPLY; CALL==============================================================================")
+// BIND; APPLY; CALL==============================================================================
 
 const pessoa = {
     nome: 'Miguel',
@@ -402,11 +416,11 @@ const myObj = {
     num2: 4,
 };
 
-function soma(a, b){
+function soma6(a, b){
     console.log(this.num1 + this.num2 + a + b);
 }
 
-soma.call(myObj, 1, 5); // nesse caso vai usar o call para passar um objeto, além dos argumentos
+soma6.call(myObj, 1, 5); // nesse caso vai usar o call para passar um objeto, além dos argumentos
 
 const pessoa2 = {
     nome: 'Miguel',
@@ -427,11 +441,11 @@ const myObj2 = {
     num2: 4,
 };
 
-function soma(a, b){
+function soma7(a, b){
     console.log(this.num1 + this.num2 + a + b);
 }
 
-soma.apply(myObj, [1,5]); // tambem podemos enviar array
+soma7.apply(myObj, [1,5]); // tambem podemos enviar array
 
 const retornaNomes = function(){
     return this.nome;
@@ -441,7 +455,8 @@ let bruno = retornaNomes.bind({ nome: 'Bruno'}); // vai jogar a funcao já passa
  
 console.log(bruno()); // agora podemos executar a variavel como se fosse a funcao ja com o parametro
 
-// MAP
+console.log("// MAP==============================================================================")
+// MAP==============================================================================
 
 // MAIS FACIL BUSCAR ELEMENTOS EM UM MAP DO QUE EM UM OBJETO; DESCOBRIR O TAMANHO; ENTRE OUTROS METODOS DISPONIVEIS
 
@@ -450,16 +465,14 @@ const myMap = new Map()
 myMap.set('apple', 'fruit');
 //Map(1) {"apple" => "fruit"}
 
-myMap.get(apple);
-// "fruit"
-
 myMap.delete("apple");
 // true
 
 myMap.get("apple")
 // undefined
 
-// NUMBER
+console.log("// NUMBER==============================================================================")
+// NUMBER==============================================================================
 
 let num = 100;
 
@@ -489,7 +502,8 @@ typeof numero
 
 numero.toString()
 
-// OBJECT DESTRUCTURING
+console.log("// OBJECT DESTRUCTURING==============================================================================")
+// OBJECT DESTRUCTURING==============================================================================
 
 // QUANDO PASSAR O OBJETO, PODE USAR SÓ O QUE VOCE PRECISAR
 
@@ -514,7 +528,8 @@ console.log(userId(user))
 
 console.log(getFullName(user))
 
-// OBJETOS
+console.log("// OBJETOS==============================================================================")
+// OBJETOS==============================================================================
 
 let obj = {}
 
@@ -542,7 +557,8 @@ person[mom] = "Maria"
 
 person.mom = "marta"
 
-// PALINDROMO
+console.log("// PALINDROMO==============================================================================")
+// PALINDROMO==============================================================================
 
 function ehPalindromo(palavra){
     if(!palavra) return "string inexistente";
@@ -576,7 +592,8 @@ myVar = null;
 console.log(verificaPalindromo(myVar));
 
 
-// SET
+console.log("// SET==============================================================================")
+// SET==============================================================================
 
 // O SET ARMAZENAM APENAS VALORES UNICOS; DIFERENTE DOS ARRAYS
 
@@ -592,7 +609,8 @@ mySet.has(1);
 mySet.has(3);
 mySet.delete(5);
 
-// SINTAXE OPERADORES
+console.log("// SINTAXE OPERADORES==============================================================================")
+// SINTAXE OPERADORES==============================================================================
 
 function compare(num1, num2){
     const iguais = num1 === num2;
@@ -607,12 +625,13 @@ function compare(num1, num2){
 
 console.log(compare(1,2));
 
-// STRING
-
-nome
+console.log("// STRING==============================================================================")
+// STRING==============================================================================
+let nome = "Rafael"
+let sobrenome = ""
 nome[1]
 nome.length
-concatenado
+let concatenado = ""
 concatenado = nome + " " + sobrenome
 concatenado = nome + "\n" + sobrenome
 concatenado = nome + "\n\n" + sobrenome
@@ -628,7 +647,8 @@ frase.endsWith("?")
 frase.replace(",","!")
 let stringModificada = frase.replace(",","!")
 
-// SWITCH
+console.log("// SWITCH==============================================================================")
+// SWITCH==============================================================================
 
 function getAnimal(id){
     if(typeof id !== "number") return "Favor informar um número";
@@ -648,7 +668,8 @@ console.log(getAnimal(1));
 console.log(getAnimal(4));
 console.log(getAnimal("1"));
 
-// THIS
+console.log("// THIS==============================================================================")
+// THIS==============================================================================
 
 const pessoa3 = {
     firstName: "Andre",
@@ -678,7 +699,8 @@ console.log(pessoa3.getId());
 
 */
 
-// VALORES DEFAULT
+console.log("// VALORES DEFAULT==============================================================================")
+// VALORES DEFAULT==============================================================================
 
 function exponencial(array, num){
     // Antes de ES2015 usavamos isso
@@ -729,7 +751,8 @@ function findMax(){
 
 console.log(findMax(1,2,3,6,90,1));
 
-// WHILE
+console.log("// WHILE==============================================================================")
+// WHILE==============================================================================
 
 function exemploWhile(){
     let num = 0;
@@ -752,3 +775,29 @@ function exemploDoWhile(){
 }
 
 exemploDoWhile()
+
+console.log("//COLECOES ATIVIDADE==============================================================================")
+//COLECOES ATIVIDADE==============================================================================
+
+
+function getAdmins(map){
+    for([key, value] of map){
+        if(map.get(key) === 'Admin'){
+            console.log(key);
+        }
+    }
+}
+
+const map = new Map();
+map.set('Rafael', 'Admin')
+map.set('Tiago', 'Admin')
+map.set('Pedro', 'Admin')
+map.set('Lucas', 'User')
+
+getAdmins(map);
+
+const array3 = [30,30,40,5,223,2049,3034,5];
+
+const set = new Set(array3);
+console.log(set);
+
