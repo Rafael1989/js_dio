@@ -811,3 +811,15 @@ console.log(valoresUnicos(array3));
 
 // MÉTODO MAP
 
+const arrayMetodoMap = [1,2,3,4,5];
+
+const arrayModificado = arrayMetodoMap.map((item) => item * 2); // nao altera o array original, gera um novo array modificado
+console.log(arrayMetodoMap);
+console.log(arrayModificado);
+
+//usando foreach
+const arrayForEach = [1,2,3,4,5];
+const arrayModificado2 = [];
+arrayForEach.forEach((item) => arrayModificado2.push(item * 2));
+console.log(arrayForEach);
+console.log(arrayModificado2);
