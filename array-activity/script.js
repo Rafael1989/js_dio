@@ -801,3 +801,11 @@ const array3 = [30,30,40,5,223,2049,3034,5];
 const set = new Set(array3);
 console.log(set);
 
+function valoresUnicos(arr){
+    const mySet = new Set(arr);
+
+    return [...mySet]; // usa o spread para retornar um array ao inves de um set
+}
+
+console.log(valoresUnicos(array3));
+
