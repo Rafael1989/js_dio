@@ -1,34 +1,31 @@
 const alunos = [{
     nome: "Rafael",
-    media: 10
+    nota: 10,
+    turma: '1A'
 },{
     nome: "Pedro",
-    media: 8
+    nota: 8,
+    turma: '1B'
 },{
     nome: "Thiago",
-    media: 7
+    nota: 7,
+    turma: '1C'
 },{
     nome: "Mateus",
-    media: 5
+    nota: 5,
+    turma: '1D'
 },]
 
 function calculaMedia(alunos, media){
     let alunosPassaram = [];
     for(aluno of alunos){
-        if(getMedia(aluno) >= media){
-            alunosPassaram.push(aluno);
+        const {nota, nome} = aluno;
+        if(nota >= media){
+            alunosPassaram.push(nome);
         }
     }
 
     return alunosPassaram;
-}
-
-function getNome({nome}){
-    return nome;
-}
-
-function getMedia({media}){
-    return media;
 }
 
 console.log(calculaMedia(alunos, 7));
@@ -44,3 +41,4 @@ const pessoa = {
 }
 
 console.log(calculaIdade.call(pessoa, 10));
+console.log(calculaIdade.apply(pessoa, [10]));
