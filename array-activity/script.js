@@ -809,3 +809,5 @@ function valoresUnicos(arr){
 
 console.log(valoresUnicos(array3));
 
+// MÉTODO MAP
+
