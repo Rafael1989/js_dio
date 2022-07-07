@@ -959,7 +959,15 @@ function calculaSaldo(saldoDisponivel, lista){
 
 console.log(calculaSaldo(saldoDisponivel, lista))
 
+// ECMAScript Error==============================================================================
+console.log("// ECMAScript Error==============================================================================")
 
+// let sum = a + 2 (a ainda nao foi declarado por exemplo)
+
+// DOMException==============================================================================
+console.log("// DOMException==============================================================================")
+
+// Talvez alguma string com um caractere invalido
 
 
 
