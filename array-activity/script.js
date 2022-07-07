@@ -809,7 +809,8 @@ function valoresUnicos(arr){
 
 console.log(valoresUnicos(array3));
 
-// MÉTODO MAP
+// MÉTODO MAP==============================================================================
+console.log("// MÉTODO MAP==============================================================================")
 
 const arrayMetodoMap = [1,2,3,4,5];
 
@@ -823,3 +824,58 @@ const arrayModificado2 = [];
 arrayForEach.forEach((item) => arrayModificado2.push(item * 2));
 console.log(arrayForEach);
 console.log(arrayModificado2);
+
+
+// FILTER==============================================================================
+console.log("// FILTER==============================================================================")
+
+const frutas = ['maca fuji', 'maca verde', 'laranja', 'abacaxi'];
+
+const frutasFiltradas = frutas.filter((fruta) => fruta.includes('maca'))
+
+console.log(frutasFiltradas)
+
+
+// REDUCE==============================================================================
+console.log("// REDUCE==============================================================================")
+
+/*const callbackFn = function(accumulator, currentValue, index, array){
+
+}
+
+array.reduce(callbackFn, initialValue);*/
+
+
+// ATIVIDADE PRATICA MAP; FILTER; REDUCE==============================================================================
+console.log("// ATIVIDADE PRATICA MAP; FILTER; REDUCE==============================================================================")
+
+const arrayapmap = [1,2,3,4,5]
+
+const arraymapmap = arrayapmap.map((valor) => valor * 3);
+
+console.log(arraymapmap);
+
+const arrayapmapfilter = arrayapmap.filter((num) => num % 2 === 0)
+
+console.log(arrayapmapfilter);
+
+const sumreduce = arrayapmap.reduce(function(sum, number) {
+    const updatedSum = sum + number;
+    return updatedSum;
+}, 0);
+
+console.log(sumreduce);
+
+const listPrecos = [33.5, 21.5, 13.5, 22, 54.3]
+const saldoInicial = 1000
+
+const saldoFinal = listPrecos.reduce(function(saldoDisponivel, preco){
+    const saldoFina = saldoDisponivel - preco;
+    return saldoFina;
+}, saldoInicial);
+
+console.log(saldoFinal);
+
+
+
+
