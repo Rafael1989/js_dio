@@ -967,8 +967,78 @@ console.log("// ECMAScript Error================================================
 // DOMException==============================================================================
 console.log("// DOMException==============================================================================")
 
-// Talvez alguma string com um caractere invalido
+// Talvez alguma string com um caractere invalido, ou vc está colocando um node do html na hierarquia errada
+
+/*
+function verificaPalindromo(string){
+    if(!string) return "String inválida";
+
+    return string === string.split('').reverse().join('');
+}
+
+verificaPalindromo('cat');
+
+THROW============================================================
+
+NESSE SEGUNDO CASO USANDO THROW VAI JOGAR NA TELA UNCAUGHT EXCEPTION; NO EXEMPLO ANTERIOR APENAS UMA STRING
+
+function verificaPalindromo(string){
+    if(!string) throw "String inválida";
+
+    return string === string.split('').reverse().join('');
+}
+
+verificaPalindromo('cat');
+*/
+
+function tryCatchExemplo(string){
+    try{
+
+    }catch(e){
+        console.log(e)
+        // OU TAMBEM PODEMOS USAR O THROW PARA COLOCAR NAS ESTATISTICAS DO BROWSER
+        throw e;
+    }finally{
+        // SERA SEMPRE EXECUTADO
+    }
+}
+
+//OBJETO ERROR
+
+const MeuErro = new Error('Mensagem Inválida');
+MeuErro.name = 'InvalidMessage'; // PODE NOMEAR O ERRO GERADO
+
+MeuErro.stack // VAI INDICAR QUAL ERRO ACONTECEU
+
+//throw MeuErro; ISSO VAI GERAR UMA EXCEPTION COM ESSE ERRO CRIADO
+
+function checkSize(array, size){
+    try{
+        if(!array) throw new ReferenceError('Favor enviar um array');
+        if(!array.length) throw new ReferenceError('Favor enviar um array populado');
+        if(!size) throw new ReferenceError('Favor enviar o size do array');
+        if(typeof array !== 'object') throw new TypeError('Favor enviar um array, nao outro tipo');
+        if(typeof size !== 'number') throw new TypeError('Favor enviar um size, nao outro tipo'); 
+        if(array.length !== size) throw new RangeError('Favor enviar um size que corresponda ao tamanho do array'); 
+    }catch(e){
+        if(e instanceof ReferenceError){
+            console.error("ReferenceError :" + e.message + "\n"+ e.stack + "\n" + e.name );
+        }else if(e instanceof TypeError){
+            console.error("TypeError :" + e.message + "\n"+ e.stack + "\n" + e.name );
+        }else if(e instanceof RangeError){
+            console.error("RangeError :" + e.message + "\n"+ e.stack + "\n" + e.name );
+        }else{
+            console.error("ERROR :" + e.message + "\n"+ e.stack + "\n" + e.name );
+        }
+    }
+}
 
 
-
-
+console.log(checkSize(2))
+const aasdads = []
+console.log(checkSize(aasdads,2))
+const aasdads2 = [2,3]
+console.log(checkSize(aasdads2))
+console.log(checkSize('aasdads2',2))
+console.log(checkSize(aasdads2,'2'))
+console.log(checkSize(aasdads2,4))
