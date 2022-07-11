@@ -1157,7 +1157,7 @@ Meal.prototype.eat = function(){
 }
 
 //Novo
-class Meal {
+class Meal2 {
     constructor(food){
         this.food = food
     }
@@ -1203,5 +1203,91 @@ let b = new Cat()
 console.log(b.type)
 
 
+
+// JS MODULOS==============================================================================
+console.log("// JS MODULOS==============================================================================")
+
+// DIVIDIR EM MODULOS; CADA ARQUIVO TEM A SUA RESPONSABILIDADE
+/*
+export function mostraIdade(pessoa){
+    return `A idade de ${pessoa.nome} é ${pessoa.idade}`;
+}
+
+export function mostraCidade(pessoa){
+    return `A idade de ${pessoa.nome} é ${pessoa.cidade}`;
+};
+
+export function mostraHobby(pessoa){
+    return `A idade de ${pessoa.nome} é ${pessoa.hobby}`;
+}
+
+function mostraIdade(pessoa){
+    return `A idade de ${pessoa.nome} é ${pessoa.idade}`;
+}
+
+function mostraCidade(pessoa){
+    return `A idade de ${pessoa.nome} é ${pessoa.cidade}`;
+};
+
+function mostraHobby(pessoa){
+    return `A idade de ${pessoa.nome} é ${pessoa.hobby}`;
+}
+
+export{
+    mostraIdade,
+    mostraCidade,
+    mostraHobby
+}
+
+function mostraIdade(pessoa){
+    return `A idade de ${pessoa.nome} é ${pessoa.idade}`;
+}
+
+function mostraCidade(pessoa){
+    return `A idade de ${pessoa.nome} é ${pessoa.cidade}`;
+};
+
+function mostraHobby(pessoa){
+    return `A idade de ${pessoa.nome} é ${pessoa.hobby}`;
+}
+
+export{
+    mostraIdade,
+    mostraCidade,
+}
+
+export default mostraHobby; // SÓ PODE SER 1 POR ARQUIVO
+
+
+import {funcao, variavel, classe} from './arquivo.js'
+
+import valorDefault from './arquivo.js' // VAI IMPORTAR O DEFAULT SEM AS CHAVES
+
+import { arquivo as Apelido } from './arquivo.js'; // PODE DAR UM APELIDO
+
+Apelido.metodo();
+
+import * as INFOS from './arquivo.js'; // PODE IMPORTAR TUDO DO ARQUIVO
+
+INFOS.metodoA();
+
+console.log(INFOS.variavel);
+
+<script type="module" src="./main.js"></script>
+
+export const name = 'value'
+import {name} from '...'
+
+export default 'value'
+import anyName from '...'
+
+export {name as newName}
+import {newName} from '...'
+
+export {name1, name2 as newName2}
+import {name1 as newName1, newName2} from '...'
+
+
+*/
 
 
