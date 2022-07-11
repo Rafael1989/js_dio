@@ -1290,4 +1290,50 @@ import {name1 as newName1, newName2} from '...'
 
 */
 
+// DOM vs BOM==============================================================================
+console.log("// DOM vs BOM==============================================================================")
+
+/* 
+
+DOM (DOCUMENT OBJECT MODEL)
+DOM COMECA COM O DOCUMENT E DENTRO DELE VC TEM O ROOT (HTML) E DEPOIS O (HEAD) E O (BODY) E DEPOIS OS ELEMENTOS DENTRO DE BODY
+
+BOM (BROWSER OBJECT MODEL)
+JÁ O BOM VC TEM O WINDOW E DENTRO DELE VC TEM DOCUMENT; HISTORY(HISTORICO); LOCATION(LOCALIZACAO); SCREEN(TELA); NAVIGATOR(NAVEGACOES)
+
+document.getElementById('titulo'); 1
+document.getElementsByTagName('li'); 1 array
+document.getElementsByClassName('textos'); 1 array
+document.querySelectorAll('.primeria-classe .segunda-classe') 1 array
+document.querySelectorAll('li .opcao') 1 array
+
+document.createElement(element);
+document.removeChild(element);
+document.appendChild(element);
+document.replaceChild(nova, velha);
+
+const meuElemento = document.getElementById('meu-elemento');
+
+meuElemento.classList.add("novo-estilo");
+meuElemento.classList.remove("classe");
+meuElemento.classList.toggle("dark-mode");
+document.getElementsByTagName("p").style.color = "blue";
+
+mouseover, mouseout, click, dbclick, change, load,
+
+const botao = document.getElementById("meuBotao");
+botao.addEventListener("click", outraFuncao);
+
+<h1 onclick="mudaTexto(this)">Clique Aqui</h1>
+*/
+
+
+
+
+
+
+
+
+
+
 
