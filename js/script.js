@@ -1134,3 +1134,74 @@ fetch('https://endereco-api.com/', {
     .then(response => response.json())
     .then(json => console.log(json))
 */
+
+// JS ORIENTADO A OBJETOS
+
+/*
+
+TODO OBJETO HERDA DE PROTOTYPE, array herda TODAS PROPRIEDADES DE ARRAY E OBJECT
+
+
+*/
+
+// JS ORIENTADO A OBJETOS==============================================================================
+console.log("// JS ORIENTADO A OBJETOS==============================================================================")
+
+//Antigo que é a forma que realmente acontece
+var Meal = function(food){
+    this.food = food
+}
+
+Meal.prototype.eat = function(){
+    return '=)'
+}
+
+//Novo
+class Meal {
+    constructor(food){
+        this.food = food
+    }
+
+    eat(){
+        return '=)'
+    }
+}
+
+class Animal {
+    constructor(type = 'animal'){
+        this.type = type
+    }
+
+    get type(){
+        return this._type
+    }
+
+    set type(val){
+        this._type = val.toUpperCase()
+    }
+
+    makeSound(){
+        console.log('Making animal sound')
+    }
+}
+
+let a = new Animal()
+console.log(a.type)
+
+class Cat extends Animal{
+    constructor(){
+        super('cat')
+    }
+
+    makeSound(){
+        super.makeSound()
+        console.log('Meow!')
+    }
+}
+
+let b = new Cat()
+console.log(b.type)
+
+
+
+
